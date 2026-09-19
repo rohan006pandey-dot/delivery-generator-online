@@ -1025,3 +1025,107 @@ aside button:hover{background:#f1f5f9}aside button.active{background:var(--navy)
     font-size: 18px;
   }
 }
+/* ===== FINAL MOBILE FIX ===== */
+
+@media screen and (max-width: 700px) {
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  header {
+    width: 100% !important;
+    height: 56px !important;
+    padding: 0 8px !important;
+  }
+
+  main {
+    display: block !important;
+    width: 100% !important;
+    min-height: calc(100vh - 56px) !important;
+    overflow-x: hidden !important;
+  }
+
+  aside {
+    display: flex !important;
+    width: 100% !important;
+    height: auto !important;
+    min-width: 0 !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--line) !important;
+    padding: 6px !important;
+    gap: 5px !important;
+  }
+
+  aside button {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 85px !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .content {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 10px !important;
+    overflow-x: hidden !important;
+  }
+
+  .grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 12px !important;
+  }
+
+  .grid > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .grid > .panel:first-child {
+    position: static !important;
+  }
+
+  .panel,
+  .previewPanel {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .preview-canvas-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .preview-canvas-wrap > .delivery-template,
+  .delivery-template {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .photoInputs {
+    width: 100% !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
