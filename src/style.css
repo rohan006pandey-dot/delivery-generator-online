@@ -825,3 +825,203 @@ aside button:hover{background:#f1f5f9}aside button.active{background:var(--navy)
 .delivery-template .name-text{
   white-space:pre-line !important;
 }
+/* ===== MOBILE RESPONSIVE FIX ===== */
+
+@media (max-width: 700px) {
+
+  header {
+    height: 56px;
+    padding: 0 10px;
+  }
+
+  header b {
+    font-size: 14px;
+  }
+
+  .user {
+    font-size: 10px;
+    gap: 5px;
+  }
+
+  .user button {
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    min-height: calc(100vh - 56px);
+  }
+
+  aside {
+    display: flex;
+    overflow-x: auto;
+    padding: 6px;
+    gap: 5px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  aside button {
+    min-width: 90px;
+    width: auto;
+    padding: 8px 10px;
+    margin: 0;
+    font-size: 11px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .content {
+    padding: 10px;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .pagehead {
+    margin-bottom: 12px;
+  }
+
+  .pagehead h2 {
+    font-size: 20px;
+  }
+
+  .pagehead p {
+    font-size: 11px;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .grid > .panel:first-child {
+    width: 100%;
+    position: static;
+  }
+
+  .panel {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .previewPanel {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .preview-heading {
+    margin-bottom: 8px;
+  }
+
+  .preview-heading h3 {
+    font-size: 14px;
+  }
+
+  .preview-canvas-wrap {
+    width: 100%;
+    min-height: 0;
+    padding: 6px;
+    overflow: hidden;
+  }
+
+  .preview-canvas-wrap > .delivery-template {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+
+  .delivery-template {
+    width: 100% !important;
+  }
+
+  .all-camera-btn {
+    min-height: 58px;
+    grid-template-columns: 38px 1fr 18px;
+    padding: 8px;
+  }
+
+  .all-camera-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 17px;
+  }
+
+  .all-camera-btn b {
+    font-size: 11px;
+  }
+
+  .all-camera-btn small {
+    font-size: 8px;
+  }
+
+  .photoInputs {
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+  }
+
+  .upload-card {
+    min-height: 125px;
+    height: 125px;
+  }
+
+  .choose-photo-btn.single-choice {
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    height: 31px;
+    font-size: 9px;
+  }
+
+  .customer-name-input {
+    min-height: 55px;
+    font-size: 12px;
+  }
+
+  .controls label {
+    font-size: 12px;
+  }
+
+  .field-hint {
+    font-size: 8px;
+  }
+}
+
+
+/* ===== SMALL PHONE ===== */
+
+@media (max-width: 400px) {
+
+  .content {
+    padding: 7px;
+  }
+
+  .panel {
+    padding: 9px;
+  }
+
+  aside button {
+    min-width: 82px;
+    font-size: 10px;
+  }
+
+  .photoInputs {
+    gap: 5px;
+  }
+
+  .upload-card {
+    min-height: 115px;
+    height: 115px;
+  }
+
+  .preview-canvas-wrap {
+    padding: 3px;
+  }
+
+  .pagehead h2 {
+    font-size: 18px;
+  }
+}
