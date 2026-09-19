@@ -925,24 +925,38 @@ function Users() {
     setRows(data || []);
   }
 
-  async function add() {
-    if (!name || !email || !password) {
-      return alert("Fill all fields");
-    }
+async function add() {
+  if (!name || !email || !password) {
+    return alert("Fill all fields");
+  }
 
-    const { data, error } =
-      await supabase.auth.admin?.createUser?.({
+  const { data, error } = await supabase.functions.invoke(
+    "create-staff",
+    {
+      body: {
+        name,
         email,
         password,
-        email_confirm: true,
-      });
-
-    if (error || !data?.user) {
-      return alert(
-        "For security, user creation requires a server/Edge Function using the Supabase service role key."
-      );
+      },
     }
+  );
+
+  if (error) {
+    return alert(error.message || "Could not create staff account");
   }
+
+  if (!data?.success) {
+    return alert(data?.error || "Could not create staff account");
+  }
+
+  alert("Staff account created successfully");
+
+  setName("");
+  setEmail("");
+  setPassword("");
+
+  await load();
+}
 
   return (
     <div>
