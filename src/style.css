@@ -1129,3 +1129,353 @@ aside button:hover{background:#f1f5f9}aside button.active{background:var(--navy)
     grid-template-columns: 1fr 1fr !important;
   }
 }
+
+
+/* =========================================================
+   ABHISHEK HYUNDAI DELIVERY TEMPLATE
+   Keeps the downloaded desktop template positioned correctly.
+   ========================================================= */
+
+.abhishek-template{
+  position:relative !important;
+  width:min(100%,1254px) !important;
+  max-width:100% !important;
+  aspect-ratio:1 / 1 !important;
+  margin:0 auto !important;
+  overflow:hidden !important;
+  background:#fff !important;
+  user-select:none !important;
+  box-sizing:border-box !important;
+}
+
+.abhishek-background{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:fill !important;
+  display:block !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+}
+
+.delivery-photo{
+  position:absolute !important;
+  z-index:5 !important;
+  overflow:hidden !important;
+  background:#e5e7eb !important;
+  box-sizing:border-box !important;
+}
+
+.delivery-photo > img{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  display:block !important;
+  object-fit:cover !important;
+}
+
+.delivery-photo > span{
+  width:100% !important;
+  height:100% !important;
+  display:grid !important;
+  place-items:center !important;
+  color:#64748b !important;
+  font-size:12px !important;
+}
+
+/* PHOTO POSITIONS */
+.abhishek-template .photo-1{
+  left:2.7% !important;
+  top:29% !important;
+  width:24.5% !important;
+  height:24.5% !important;
+}
+
+.abhishek-template .photo-2{
+  left:27.9% !important;
+  top:29% !important;
+  width:24.5% !important;
+  height:24.5% !important;
+}
+
+.abhishek-template .photo-3{
+  left:2.7% !important;
+  top:54.5% !important;
+  width:24.5% !important;
+  height:24.5% !important;
+}
+
+.abhishek-template .photo-4{
+  left:27.9% !important;
+  top:54.5% !important;
+  width:24.5% !important;
+  height:24.5% !important;
+}
+
+/* CUSTOMER / MODEL / DATE */
+.abhishek-template .abhishek-customer-name,
+.abhishek-template .abhishek-car-model,
+.abhishek-template .abhishek-delivery-date{
+  position:absolute !important;
+  left:66.2% !important;
+  width:28.5% !important;
+  box-sizing:border-box !important;
+  display:flex !important;
+  align-items:center !important;
+  margin:0 !important;
+  padding:0 5px !important;
+  z-index:20 !important;
+  color:#092653 !important;
+  font-family:Georgia,"Times New Roman",serif !important;
+  font-weight:600 !important;
+  text-shadow:0 1px 1px rgba(255,255,255,.75) !important;
+}
+
+.abhishek-template .abhishek-customer-name{
+  top:35.2% !important;
+  height:8% !important;
+  white-space:pre-line !important;
+  line-height:1.05 !important;
+}
+
+.abhishek-template .abhishek-car-model{
+  top:45.5% !important;
+  height:8% !important;
+  white-space:pre-line !important;
+  line-height:1.05 !important;
+}
+
+.abhishek-template .abhishek-delivery-date{
+  top:55.8% !important;
+  height:7% !important;
+  white-space:nowrap !important;
+  line-height:1 !important;
+}
+
+.abhishek-template .abhishek-customer-name,
+.abhishek-template .abhishek-car-model,
+.abhishek-template .abhishek-delivery-date{
+  font-size:clamp(13px,2.35vw,32px) !important;
+}
+
+/* =========================================================
+   MOBILE
+   IMPORTANT: index.html must have the viewport meta tag.
+   ========================================================= */
+
+@media screen and (max-width:700px){
+
+  html,
+  body,
+  #root{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    overflow-x:hidden !important;
+  }
+
+  header{
+    width:100% !important;
+    height:56px !important;
+    padding:0 8px !important;
+  }
+
+  header b{
+    font-size:14px !important;
+  }
+
+  .user{
+    font-size:10px !important;
+    gap:5px !important;
+  }
+
+  .user button{
+    padding:6px 8px !important;
+    font-size:10px !important;
+  }
+
+  main{
+    display:block !important;
+    width:100% !important;
+    min-height:calc(100vh - 56px) !important;
+    overflow-x:hidden !important;
+  }
+
+  aside{
+    display:flex !important;
+    width:100% !important;
+    height:auto !important;
+    min-width:0 !important;
+    flex-direction:row !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    padding:6px !important;
+    gap:5px !important;
+    border-right:0 !important;
+    border-bottom:1px solid var(--line) !important;
+  }
+
+  aside button{
+    flex:0 0 auto !important;
+    width:auto !important;
+    min-width:85px !important;
+    margin:0 !important;
+    padding:8px 10px !important;
+    white-space:nowrap !important;
+    text-align:center !important;
+    font-size:11px !important;
+  }
+
+  .content{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    padding:10px !important;
+    overflow-x:hidden !important;
+  }
+
+  .pagehead{
+    width:100% !important;
+    margin-bottom:12px !important;
+  }
+
+  .pagehead h2{
+    font-size:20px !important;
+  }
+
+  .pagehead p{
+    font-size:11px !important;
+  }
+
+  .pagehead .primary{
+    width:100% !important;
+  }
+
+  .grid{
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    gap:12px !important;
+  }
+
+  .grid > *{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+  }
+
+  .grid > .panel:first-child{
+    position:static !important;
+  }
+
+  .panel,
+  .previewPanel{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    box-sizing:border-box !important;
+  }
+
+  .preview-canvas-wrap{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    min-height:0 !important;
+    padding:6px !important;
+    overflow:hidden !important;
+    box-sizing:border-box !important;
+  }
+
+  .preview-canvas-wrap > .delivery-template,
+  .delivery-template,
+  .abhishek-template{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    box-sizing:border-box !important;
+  }
+
+  .photoInputs{
+    width:100% !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:7px !important;
+  }
+
+  .upload-card{
+    min-height:125px !important;
+    height:125px !important;
+  }
+
+  .all-camera-btn{
+    min-height:58px !important;
+    grid-template-columns:38px 1fr 18px !important;
+    padding:8px !important;
+  }
+
+  .abhishek-template .abhishek-customer-name,
+  .abhishek-template .abhishek-car-model,
+  .abhishek-template .abhishek-delivery-date{
+    left:66.2% !important;
+    width:28.5% !important;
+    font-size:clamp(11px,3.5vw,15px) !important;
+    padding:0 2px !important;
+  }
+
+  .abhishek-template .abhishek-customer-name{
+    top:35.2% !important;
+    height:8% !important;
+  }
+
+  .abhishek-template .abhishek-car-model{
+    top:45.5% !important;
+    height:8% !important;
+  }
+
+  .abhishek-template .abhishek-delivery-date{
+    top:55.8% !important;
+    height:7% !important;
+  }
+}
+
+@media screen and (max-width:400px){
+
+  .content{
+    padding:7px !important;
+  }
+
+  .panel,
+  .previewPanel{
+    padding:9px !important;
+  }
+
+  aside button{
+    min-width:82px !important;
+    font-size:10px !important;
+  }
+
+  .photoInputs{
+    gap:5px !important;
+  }
+
+  .upload-card{
+    min-height:115px !important;
+    height:115px !important;
+  }
+
+  .pagehead h2{
+    font-size:18px !important;
+  }
+
+  .abhishek-template .abhishek-customer-name,
+  .abhishek-template .abhishek-car-model,
+  .abhishek-template .abhishek-delivery-date{
+    font-size:11px !important;
+  }
+}
+
